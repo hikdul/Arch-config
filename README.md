@@ -42,10 +42,16 @@ este archivo es para tener almacenado todo el proceso de instalacion y configura
 7.- Ahora mi paso a seguir es configurar neovim, para esto se puede usar mi propio [repositorio](https://github.com/hikdul/nvim)
 
 
-#### etapa 2, 
+#### etapa 2, windows mannagement, aplicasienes necesarias y cambios visuales validos.
+
+una ves configurado de el terminal y todo lo que lleva se viene la parte de instalar aplicasiones he ir dejando las configuraciones necesarias
+
+* waypaper: para manejar los fondos de escritorio
+* Weybar: La verdad que no me gusto.. mi idea es quitarme este weybar para generar mayor productividad..
+* fastfetch: para ver los datos del equipo con un simple comando.
+* rofi: o un lanzador de aplicasiones[todo]
 
 ---
-
 
 ### carpeta config
 
