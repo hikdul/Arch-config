@@ -28,13 +28,13 @@ este archivo es para tener almacenado todo el proceso de instalacion y configura
  * para configurar mi zsh, configuramos el archivo `.zshrc` con `sudo nvim .zshrc`. puede ojerar mi [configuracion](./config/zshrc.copy) 
   Para la configuracion por favor retirar `.copy`
  * TODO: Buscar como crear mi propia plantilla para Oh-mi-zsh. Aca se deben de instalar diferentes plugins.
- 6.1 [Zsh History Substring Search](https://github.com/zsh-users/zsh-history-substring-search)
+  * [Zsh History Substring Search](https://github.com/zsh-users/zsh-history-substring-search)
         Un complemento que facilita la búsqueda en el historial de comandos de Zsh.
 
- 6.2 [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+  * [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
         Proporciona resaltado de sintaxis para comandos en la terminal Zsh. 
 
- 6.3 [Zsh Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+  * [Zsh Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
         Sugerencias automáticas mientras escribes en la terminal Zsh. https://github.com/zsh-users/zsh-auto...
 
 7.- Ahora mi paso a seguir es configurar neovim, para esto se puede usar mi propio [repositorio](https://github.com/hikdul/nvim)
