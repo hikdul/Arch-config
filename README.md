@@ -4,6 +4,8 @@ este archivo es para tener almacenado todo el proceso de instalacion y configura
 
 ## Pasos para generar la instalacion
 
+#### etapa 1, instalacion, fuente, terminal y editor base.
+
 1.- Instalacion: En cuanto a la configuracion, del disco y los demas elemento se puede hacer de manera manual o utilizando el instalador `archinstall`. 
  * para el type se recomienda hacer una instalacion minima, asi solo tenemos los paquetes base de arch.
  * en el caso de los paquetes extras se recomienda agregar: git, neovim y gcc.
@@ -27,7 +29,6 @@ este archivo es para tener almacenado todo el proceso de instalacion y configura
  * ahora instalamos [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh), la instalacion esta en el github.
  * para configurar mi zsh, configuramos el archivo `.zshrc` con `sudo nvim .zshrc`. puede ojerar mi [configuracion](./config/zshrc.copy) 
   Para la configuracion por favor retirar `.copy`
- * TODO: Buscar como crear mi propia plantilla para Oh-mi-zsh. Aca se deben de instalar diferentes plugins.
   * [Zsh History Substring Search](https://github.com/zsh-users/zsh-history-substring-search)
         Un complemento que facilita la búsqueda en el historial de comandos de Zsh.
 
@@ -36,8 +37,12 @@ este archivo es para tener almacenado todo el proceso de instalacion y configura
 
   * [Zsh Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
         Sugerencias automáticas mientras escribes en la terminal Zsh. https://github.com/zsh-users/zsh-auto...
+  * instalar las fuentes de [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#option-4-arch-extra-repository) (aca la que me gusta)[https://aur.archlinux.org/packages/nerd-fonts-complete-mono-glyphs) y de manera manual descargar la fuente [agave](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Agave.zip)
 
 7.- Ahora mi paso a seguir es configurar neovim, para esto se puede usar mi propio [repositorio](https://github.com/hikdul/nvim)
+
+
+#### etapa 2, 
 
 ---
 
@@ -46,7 +51,7 @@ este archivo es para tener almacenado todo el proceso de instalacion y configura
 
 * Up[26JUN2024] => contiene todos los datos que se estan manejando hasta ahora
 
-#### Referencias
+##### Referencias
 
 * en este [video](https://www.youtube.com/watch?v=Ka76a9UzRDM&list=PL6hUe7QiuXd6IjklArH0KlqcW-S4KHsCG&index=10) se muestra una configuracion bastante interesante, francamente esta es la que use como base final de configuracion.
 * con este [video](https://www.youtube.com/watch?v=ltbhkjipafs&t=124s) se esplica un poco de la instalacion gracias a instalador de archinstall
