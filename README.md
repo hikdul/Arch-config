@@ -5,6 +5,10 @@ este archivo es para tener almacenado todo el proceso de instalacion y configura
 
 TODO: Completar la lista de elementos o pasos a seguir para tener una buena instalacion
 
+### carpeta config
+
+* Up[26JUN2024] => contiene todos los datos que se estan manejando hasta ahora
+
 #### Lista de recursos
 
 * en este [video](https://www.youtube.com/watch?v=Ka76a9UzRDM&list=PL6hUe7QiuXd6IjklArH0KlqcW-S4KHsCG&index=10) se muestra una configuracion bastante interesante, francamente esta es la que use como base final de configuracion.
