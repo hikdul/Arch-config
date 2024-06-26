@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "coc-eslint": ">=1.7.0",
+    "coc-omnisharp": ">=0.0.28",
+    "coc-angular": ">=17.0.2",
+    "coc-json": ">=1.9.2",
+    "coc-html": ">=1.8.0",
+    "coc-tsserver": ">=2.2.0",
+    "coc-tslint": ">=1.0.17",
+    "coc-tslint-plugin": ">=1.2.0",
+    "coc-explorer": ">=0.27.3",
+    "coc-snippets": ">=3.1.10"
+  }
+}
