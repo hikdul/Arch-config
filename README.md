@@ -1,8 +1,48 @@
 # Configuracion Para Arch Linux
 
-este archivo es para tener almacenado todo el proceso de instalacion y configuracion de mi Arch Linux. realmente luego de leer varios documentos y muchos videos de youtube pude hacerme con algo. 
+este archivo es para tener almacenado todo el proceso de instalacion y configuracion de mi Arch Linux. en particular uso linux en dual boot junto a windows, asi que este documento se prepara para hacer esa configuracion.
 
 ## Pasos para generar la instalacion
+
+### pre-instalacion
+normalmente hay que hacer una configuracion previa en windows para que linux no nos moleste; todos esos datos los podemos conseguir en este [link](https://wiki.archlinux.org/title/Dual_boot_with_Windows).
+
+de igual modo y a nivel general los pasos son desactivar el inicio rapido y modo de hibernacion de windows; y por otro lado desactivar el arranque seguro dentro del sistema UEFI.
+
+### instalacion
+
+para instalar arch no es mas si no configurar nuestros disco duro y generar la instalacion con **archinstall** y alli saber que vamos a tener el modo desktop con el tipo de escritorio **hyprland** ya que toda mi configuracion se basa en esto. Tambien recordar agregar los siguientes paquetes:
+* gcc => GNU Compiler Collection.
+* nvim => como editor de texto inicial, aunque el instalador de arch instala vim.
+* git => para tener acceso a los repositorios
+* firefox => para ingresar a internet
+* fastfetch => para ver los datos del consumo y trabajo de nuestro equipo con el nuevo sistema operativo.
+y por ultimo agregar el repositorio extra **mustilib**
+
+### postinstalacion
+aca se cubren varias etapas, pero la primera es configurar el dual boot ya que arch no instala ni configura todos los elementos necesarios para que esto funcione a la perfeccion; ya luego iremos instalando y configurando cada paquete piana a piano.
+
+#### configuracion de dual boot
+
+una ves completada la instalacion nos indica que si deseamos hacer root, aca aceptamos y seguimos los siguientes pasos:
+* `sudo pacman -Syu` 
+* `sudo pacman -S grub efibootmgr mtools` 
+* `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB`
+* `grub-mkconfig -o /boot/grub/grub.cfg`
+luego reiniciamos el sistema y entramos a linux, aun nos falta un par de pasos mas para que esto funcione. 
+una ves en linux ingresamos en nuestro terminal, en mi caso debo de pasar el teclado a la distro *dvorak* en el archivo de configuracion de *hypr* y continuamos trabajando (para pasar solo agregamos la linea `kb_variant = dvorak` en los datos de configuracion del teclado o input)
+* ahora instalamos el *os-prober* que es quien nos detectara nuestro windows sudo `pacman -S os-prober`
+* una ves instalado entramos en el archivo **/etc/default/grub** y descamentamos la siguiente linea `GRUB_DISABLE_OS_PROBER=true`.
+* luego ejecutamos el siguiente comando para que recosca nuestros so's `sudo grub-mkconfig -o /boot/grub/grub.cfg`
+* si al reiniciar esto no funciona, se debe de hacer nuevamente los ultimos 2 pasos y asi nuestro so queda funcionando.
+
+#### intstalando yay
+en este segmento obtendremos acceso a los paquetes de la comunidad, para poder instalar paquetes opcionales que no estan en el repositorio original. este paso es importante ya que con el accederemos a la instalacion de otras aplicaciones. debido a que puede cambiar el modo de instalacion lo recomendable es seguir las instrucciones [oficiales](https://github.com/Jguer/yay?tab=readme-ov-file)
+
+
+---
+desde aca son elementos... aun no se termina este documonto
+---
 
 #### etapa 1, instalacion, fuente, terminal y editor base.
 
@@ -56,8 +96,9 @@ una ves configurado de el terminal y todo lo que lleva se viene la parte de inst
 ### carpeta config
 
 * Up[26JUN2024] => contiene todos los datos que se estan manejando hasta ahora
+---
 
-##### Referencias
+###### Referencias
 
 * en este [video](https://www.youtube.com/watch?v=Ka76a9UzRDM&list=PL6hUe7QiuXd6IjklArH0KlqcW-S4KHsCG&index=10) se muestra una configuracion bastante interesante, francamente esta es la que use como base final de configuracion.
 * con este [video](https://www.youtube.com/watch?v=ltbhkjipafs&t=124s) se esplica un poco de la instalacion gracias a instalador de archinstall
