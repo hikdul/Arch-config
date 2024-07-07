@@ -36,8 +36,45 @@ una ves en linux ingresamos en nuestro terminal, en mi caso debo de pasar el tec
 * luego ejecutamos el siguiente comando para que recosca nuestros so's `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 * si al reiniciar esto no funciona, se debe de hacer nuevamente los ultimos 2 pasos y asi nuestro so queda funcionando.
 
-#### intstalando yay
+#### instalando yay
 en este segmento obtendremos acceso a los paquetes de la comunidad, para poder instalar paquetes opcionales que no estan en el repositorio original. este paso es importante ya que con el accederemos a la instalacion de otras aplicaciones. debido a que puede cambiar el modo de instalacion lo recomendable es seguir las instrucciones [oficiales](https://github.com/Jguer/yay?tab=readme-ov-file)
+
+sin embargo la ultima ves que lo instale hice los siguientes pasos
+
+* descarge el repositoria con el siguiente comando `git clone https://aur.archlinux.org/yay.git` 
+* luego ingrese a la carpeta donde esta el yay y escribi `makepkg -si` acepte todo y listo tenemos instalado todo lo necesario para continuar
+
+#### configurando neovim
+
+Generalmente tendremos que escribir bastante y para hacerlo de manera comoda en particular uso este editor de texto para casi todas mis operaciones; para esto en la carpeta **.config** descargo el siguiente [repositorio](https://github.com/hikdul/nvim.git)
+
+* desde el home me dirijo a la carpeta `cd .config`
+* clono el repositorio con `git clone https://github.com/hikdul/nvim.git`
+* instalo [vim-plug](https://github.com/junegunn/vim-plug?tab=readme-ov-file) con el siguiente comando
+`sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
+* luego ingreso con `nvim nvim` y automaticamente se empiezan a instalar las extenciones. aunque por lo general hay que instalar node y pip para que todo funcione normalmente.
+
+*completando configuracion de NeoVim con pip y nodejs*
+
+* para esto usamos los paquetes de nodejs y python-pip de la documentacion, con yay se instalan sencillamente.
+* [pip](https://archlinux.org/packages/extra/any/python-pynvim/)
+* [nodejs](https://archlinux.org/packages/extra/x86_64/nodejs/)
+* ya luego instalamos [npm](https://archlinux.org/packages/extra/any/npm/) para que nos maneje los paquetes de node `yay -S npm`
+* y por ultimo instalamos [python-pynvim](https://archlinux.org/packages/extra/any/python-pynvim/) con `yay -S python-pynvim`
+ya con esto tenemos esta configuracion lista, entramos de nuevo a nvim y el solito termina de instalar lo faltante; podemos ver si necesitamos algo extra usando _:checkhealt_
+
+#### Git && github
+
+ahora es el turno de tener nuestro git funcionando con github, para el monmento en que cree este archivo, ese es el repositorio que usaba la empresa, asi que dejo esta configuracion aca para mantener el orden y poder seguir manteniendo mi modo de trabajo.
+
+* primero necesitamos generar el personal access token en github _setting > developmen Settings > Personal access Tokens_ y aca lo generamos y guardamos. Si ya se tiene uno almacenado, ignorar este paso
+* luego configuramos nuestro github con el usuario y el email con `git config --global user.name <>` y `git config --global user.email <>` 
+* por ultimo descargamos un repositorio privado y como password usamos nuestro personal access token 
+* una ves que nos descarge el repo, le decimos a git que use estas credenciales constantemente con 
+`git config --global credential.helper store<D-C>`
+y luego
+`git config --global credential.helper cache`
+de este modo ya nos usa las credenciales mientras el token este activo. En algunos casos hay que ingresar nuevamente las credenciales
 
 
 ---
@@ -104,4 +141,4 @@ una ves configurado de el terminal y todo lo que lleva se viene la parte de inst
 * con este [video](https://www.youtube.com/watch?v=ltbhkjipafs&t=124s) se esplica un poco de la instalacion gracias a instalador de archinstall
 https://www.youtube.com/watch?v=ltbhkjipafs&t=124s
 * En este otro [video](https://www.youtube.com/watch?v=2rh4Ik4WQZA&t=2883s) explica todos los pasos a seguir previos a la instalacion para una instalacion manual. De este realmente lo importante fue tomar la palabras ttecnicas para luego ampliar mi vocabulario
-
+* configuracion de git [enlace](https://www.freecodecamp.org/espanol/news/como-evitar-que-git-siempre-solicite-las-credenciales-de-usuario/)
