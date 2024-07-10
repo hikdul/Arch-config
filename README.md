@@ -15,7 +15,7 @@ para instalar arch no es mas si no configurar nuestros disco duro y generar la i
 * gcc => GNU Compiler Collection.
 * nvim => como editor de texto inicial, aunque el instalador de arch instala vim.
 * git => para tener acceso a los repositorios
-* firefox => para ingresar a internet
+* brave-bin => para ingresar a internet
 * fastfetch => para ver los datos del consumo y trabajo de nuestro equipo con el nuevo sistema operativo.
 y por ultimo agregar el repositorio extra **mustilib**
 
@@ -63,6 +63,13 @@ Generalmente tendremos que escribir bastante y para hacerlo de manera comoda en 
 * y por ultimo instalamos [python-pynvim](https://archlinux.org/packages/extra/any/python-pynvim/) con `yay -S python-pynvim`
 ya con esto tenemos esta configuracion lista, entramos de nuevo a nvim y el solito termina de instalar lo faltante; podemos ver si necesitamos algo extra usando _:checkhealt_
 
+#### Instalacion de fuentes
+
+normalmente esto es un paso netamente decorativo, pero si es mi sistema que se veo como deseo. En particular instalo las siguientes fuentes:
+
+
+con esta instalacion ya en la configuracion ya tanto mi consola, como nvim como la configuracion general del sistema empieza a tener sentido.
+
 #### Git && github
 
 ahora es el turno de tener nuestro git funcionando con github, para el monmento en que cree este archivo, ese es el repositorio que usaba la empresa, asi que dejo esta configuracion aca para mantener el orden y poder seguir manteniendo mi modo de trabajo.
@@ -76,6 +83,11 @@ y luego
 `git config --global credential.helper cache`
 de este modo ya nos usa las credenciales mientras el token este activo. En algunos casos hay que ingresar nuevamente las credenciales
 
+## ========================
+
+# TODO: Desde aca continuamos con la configuracion de zsh y desde alli los archivos de configuracion y los paquetes que se tengan que instalar
+
+## ========================
 
 ---
 desde aca son elementos... aun no se termina este documonto
