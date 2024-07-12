@@ -63,11 +63,35 @@ Generalmente tendremos que escribir bastante y para hacerlo de manera comoda en 
 * y por ultimo instalamos [python-pynvim](https://archlinux.org/packages/extra/any/python-pynvim/) con `yay -S python-pynvim`
 ya con esto tenemos esta configuracion lista, entramos de nuevo a nvim y el solito termina de instalar lo faltante; podemos ver si necesitamos algo extra usando _:checkhealt_
 
+#### Zsh
+
+En particular uso este "terminal" para hacer mis operaciones por defecto, y aunque no tengo nada en contra de _bash_ si encuentro cierto encanto en usar **[ZSH](https://wiki.archlinux.org/title/zsh)** como principal.
+
+* `sudo pacman -S zsh`, instalamos el shell
+* `sudo pacman -S zsh-doc` , esto es para no depender de internet a lo hora de necesitar documentacion
+* `chsh -s $(which zsh)`, con esta linea aplicamos zsh como principal. No usar _sudo_ ya que el cambio se aria especificamente para el usuario ROOT
+* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` luego instalamos OhMyZsh para los estilos. recomiendo buscar la [documentacion oficiar](https://ohmyz.sh/#install) en caso de falla
+
+##### temas
+para visualizar la [lista de temas](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) y seleccionar el que mas guste.
+
+##### instalacion de plugs
+* szh-history-substring-search para dar sugerencias [doc](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+* szh-autosuggestions [doc](https://github.com/zsh-users/zsh-history-substring-search)
+* zsh-syntax-highlighting [doc](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+* para verficar los pulg-in puede visitar la [doc](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+
+=> NOTE: voy en el minuto 6 del video
+https://www.youtube.com/watch?v=353UyFVNoW8&t=30s
+
+##### Prompt 
+* en mi caso cree mi prompt con la ayuda de la siguiente [documentacion](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html)
+
 #### Instalacion de fuentes
 
 normalmente esto es un paso netamente decorativo, pero si es mi sistema que se veo como deseo. En particular instalo las siguientes fuentes:
-
-
+* firacode: `yay -S ttf-firacode-nerd`, esta fuente es para ser aplicada en mis textos
+* <>: `yay -S ttf-<>-nerd`, esta fuente es para que me entrege los iconos y ciertos elementos visuales.
 con esta instalacion ya en la configuracion ya tanto mi consola, como nvim como la configuracion general del sistema empieza a tener sentido.
 
 #### Git && github
@@ -82,6 +106,10 @@ ahora es el turno de tener nuestro git funcionando con github, para el monmento 
 y luego
 `git config --global credential.helper cache`
 de este modo ya nos usa las credenciales mientras el token este activo. En algunos casos hay que ingresar nuevamente las credenciales
+
+#### otros paquetes 
+
+* `yaya -S unimatrix-git` => este paquete me entrega una vista genial para dejar mi equipo cuando necesite irme un momento
 
 ## ========================
 
