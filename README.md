@@ -109,7 +109,8 @@ de este modo ya nos usa las credenciales mientras el token este activo. En algun
 
 #### otros paquetes 
 
-* `yaya -S unimatrix-git` => este paquete me entrega una vista genial para dejar mi equipo cuando necesite irme un momento
+* `yay -S visual-studio-code-bin` => Editor base para el ambiente de trabajo
+* `yay -S unimatrix-git` => este paquete me entrega una vista genial para dejar mi equipo cuando necesite irme un momento
 
 ## ========================
 
