@@ -102,8 +102,10 @@ ahora es el turno de tener nuestro git funcionando con github, para el monmento 
 * luego configuramos nuestro github con el usuario y el email con `git config --global user.name <>` y `git config --global user.email <>` 
 * por ultimo descargamos un repositorio privado y como password usamos nuestro personal access token 
 * una ves que nos descarge el repo, le decimos a git que use estas credenciales constantemente con 
+
 `git config --global credential.helper store<D-C>`
 y luego
+ 
 `git config --global credential.helper cache`
 de este modo ya nos usa las credenciales mientras el token este activo. En algunos casos hay que ingresar nuevamente las credenciales
 
