@@ -149,6 +149,50 @@ sqlcmd -S localhost -U sa
 ```
 y agregamos el password
 
+#### .NET
+
+tengo la iniciativa de tener distintos proyectos en distintas distribuciones y por tanto he de instalar los componentes necesarios para cada framework, los paquetes debe de buscarlos con pacman o yay bajo los siguientes nombres:
+`
+extra/dotnet-host 8.0.6.sdk106-1 [installed]
+    A generic driver for the .NET Core Command Line Interface
+extra/dotnet-runtime 8.0.6.sdk106-1 [installed]
+    The .NET Core runtime
+extra/dotnet-runtime-6.0 6.0.31.sdk131-1 [installed]
+    The .NET Core runtime
+extra/dotnet-runtime-7.0 7.0.20.sdk120-1
+    The .NET Core runtime
+extra/dotnet-sdk 8.0.6.sdk106-1 [installed]
+    The .NET Core SDK
+extra/dotnet-sdk-6.0 6.0.31.sdk131-1 [installed]
+    The .NET Core SDK
+extra/dotnet-sdk-7.0 7.0.20.sdk120-1
+    The .NET Core SDK
+extra/dotnet-source-built-artifacts 8.0.6.sdk106-1
+    Internal package for building the .NET Core SDK
+extra/dotnet-source-built-artifacts-6.0 6.0.31.sdk131-1 [installed]
+    Internal package for building the .NET Core SDK
+extra/dotnet-source-built-artifacts-7.0 7.0.20.sdk120-1
+    Internal package for building the .NET Core SDK
+extra/dotnet-targeting-pack 8.0.6.sdk106-1 [installed]
+    The .NET Core targeting pack
+extra/dotnet-targeting-pack-6.0 6.0.31.sdk131-1 [installed]
+    The .NET Core targeting pack
+extra/dotnet-targeting-pack-7.0 7.0.20.sdk120-1
+    The .NET Core targeting pack
+`
+
+tambien tuve que instalar los siguientes:
+
+`
+extra/aspnet-runtime 8.0.6.sdk106-1 [installed]
+    The ASP.NET Core runtime
+extra/aspnet-runtime-6.0 6.0.31.sdk131-1 [installed]
+    The ASP.NET Core runtime
+extra/aspnet-runtime-7.0 7.0.20.sdk120-1
+    The ASP.NET Core runtime
+`
+y despues de todo eso me corria de maravilla .NET
+
 
 
 ## ========================
