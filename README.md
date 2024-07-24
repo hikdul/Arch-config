@@ -114,6 +114,43 @@ de este modo ya nos usa las credenciales mientras el token este activo. En algun
 * `yay -S visual-studio-code-bin` => Editor base para el ambiente de trabajo
 * `yay -S unimatrix-git` => este paquete me entrega una vista genial para dejar mi equipo cuando necesite irme un momento
 
+#### Hyprdocs
+
+luego de unos dias configurando consegui el siguiente [paquete](https://github.com/prasanthrangan/hyprdots), donde si ignoro la ultima parte me instala todo lo necesario y me deja nada mas configurar el terminal y demas elementos a mi gusto.
+
+
+#### SQL Server
+
+para esto hay que instalar 3 paquetes
+
+* mssql-server
+* msodbcsql and
+* mssql-tools
+
+luego activar el sql server con
+```
+sudo systemctl enable mssql-server
+```
+y arrancor el servicio con
+
+```
+sudo systemctl enable mssql-server
+```
+
+validamos que todo este bien con
+```
+sudo systemctl status mssql-server
+```
+
+por ultimo creamos el usuario SA
+
+```
+sqlcmd -S localhost -U sa
+```
+y agregamos el password
+
+
+
 ## ========================
 
 # TODO: Desde aca continuamos con la configuracion de zsh y desde alli los archivos de configuracion y los paquetes que se tengan que instalar
@@ -185,3 +222,4 @@ una ves configurado de el terminal y todo lo que lleva se viene la parte de inst
 https://www.youtube.com/watch?v=ltbhkjipafs&t=124s
 * En este otro [video](https://www.youtube.com/watch?v=2rh4Ik4WQZA&t=2883s) explica todos los pasos a seguir previos a la instalacion para una instalacion manual. De este realmente lo importante fue tomar la palabras ttecnicas para luego ampliar mi vocabulario
 * configuracion de git [enlace](https://www.freecodecamp.org/espanol/news/como-evitar-que-git-siempre-solicite-las-credenciales-de-usuario/)
+* SQL Server [blog](https://medium.com/@jdomeh77/installing-microsoft-sql-mssql-on-arch-linux-bc42de01113c)
